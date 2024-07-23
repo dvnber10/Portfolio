@@ -1,0 +1,119 @@
+.navbar {
+  position: sticky;
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  align-items: center;
+  justify-content: end;
+  display: flex;
+  background: rgba(30, 30, 30, 0.5);
+  backdrop-filter: blur(3px);
+}
+
+.barras {
+  display: none;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
+}
+
+li {
+  list-style: none;
+  margin: auto 2px;
+  text-decoration: none;
+}
+
+li a {
+  text-decoration: none;
+  padding: 0 25px;
+  display: block;
+  text-align: left;
+  color: white;
+}
+ul li a:hover {
+  //   float: right;
+  background-color: #aa7f72;
+  border-radius: 5px;
+}
+/*aca configuro como se veria en tablet*/
+@media (max-width: 850px) {
+  .barras {
+    background-color: #1e1e1e;
+    display: block;
+  }
+  .desplegable {
+    width: 50%;
+    height: 60%;
+    transform: translate(-100%);
+    transition: 0.5s;
+    font-size: 1.5rem;
+    width: 50%;
+    background: rgba(30, 30, 30, 0.5);
+    backdrop-filter: blur(2px);
+    border-radius: 15px;
+    margin: 5px;
+  }
+  i {
+    font-size: 30px;
+    background: #1e1e1e;
+    color: white;
+  }
+  li a {
+    padding: 20px 0px 20px 20px;
+    display: block;
+    text-align: left;
+  }
+  ul {
+    padding: 5px;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  button {
+    margin: 10px 10px 10px 20px;
+    border: none;
+  }
+  .boton_menu {
+    background-image: url("https://imgs.search.brave.com/bmoBbGvfkvgAWQB6wKA6fvhmSk8SXwtl81NPiwTP-pQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbi1pY29ucy5j/b20vaWNvbnMyLzM0/NDYvUE5HLzk2L21l/bnVfY29uZmlndXJh/dGlvbl9vcHRpb25z/X3Rvb2xzX2ljb25f/MjE5MjM5LnBuZw");
+    background-color: #1e1e1e;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    background-size: 30px 30px;
+    background-position: center;
+  }
+  /*con esta clase abro y cierro el menu con toggle*/
+  .abrir_menu {
+    background: rgba(30, 30, 30, 0.6);
+    backdrop-filter: blur(2px);
+    transform: translate(-50%);
+    width: 50%;
+    transition: 0.5s;
+  }
+  /*con esta clase cambio las barras por una x*/
+  .colocar_x {
+    background-image: url("https://imgs.search.brave.com/bmoBbGvfkvgAWQB6wKA6fvhmSk8SXwtl81NPiwTP-pQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbi1pY29ucy5j/b20vaWNvbnMyLzM0/NDYvUE5HLzk2L21l/bnVfY29uZmlndXJh/dGlvbl9vcHRpb25z/X3Rvb2xzX2ljb25f/MjE5MjM5LnBuZw");
+    background-color: #1e1e1e;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    background-size: 30px 30px;
+    background-position: center;
+  }
+}
+/*aca configuro como se veria en celular*/
+@media (max-width: 500px) {
+  .desplegable {
+    width: 100%;
+    height: 450%;
+    font-size: 1.6rem;
+  }
+  button {
+    margin: 10px 10px 10px 15px;
+  }
+}
